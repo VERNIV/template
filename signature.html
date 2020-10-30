@@ -12,7 +12,7 @@
     </style>
     <script>
         window.onload = () => {
-            const target = ['title', 'name', 'name_en', 'phone', 'email'];
+            const target = ['title', 'name', 'name_en', 'phone'];
             target.forEach(v => {
                 document.querySelector(`input[name="${v}"]`).addEventListener('input', (event) => {
                     document.querySelector(`#${v}`).textContent = event.target.value;
@@ -41,7 +41,6 @@
                 <span id="name">홍길동</span> ·
                 <span id="name_en">Gildong Hong</span><br>
                 <span id="phone">+82-10-0000-0000</span><br>
-                <span id="email">mail@verniv.io</span>
             </p>
         </div>
         <div style="margin-left: 20px;">
@@ -50,7 +49,6 @@
                 <input name="name" type="text" placeholder="홍길동"><br>
                 <input name="name_en" type="text" placeholder="Gildong Hong"><br>
                 <input name="phone" type="text" value="+82-10-0000-0000"><br>
-                <input name="email" type="email" placeholder="mail@verniv.io">
             </form>
         </div>
     </div>
