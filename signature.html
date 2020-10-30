@@ -1,4 +1,59 @@
-<p style="text-decoration: underline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p>signature test</p>
-<p>+82-10-0000-0000 · AAA</p>
-<p>TEST</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            color: #463935;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const target = ['title', 'name', 'name_en', 'phone', 'email'];
+            target.forEach(v => {
+                document.querySelector(`input[name="${v}"]`).addEventListener('input', (event) => {
+                    document.querySelector(`#${v}`).textContent = event.target.value;
+                });
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: row; align-items: center; font-size: 12px;">
+        <div>
+            <p style="text-decoration: underline; color: #CBBFBB;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p style="margin: 1.6em 0 0 0; font-size: 0.9em;">
+                주식회사 버니브<br>VERNIV Co., Ltd.<br>
+            </p>
+            <p style="font-size: 0.75em; margin-top: 0.4em;">
+                LS66, 5F, 320, Gangnam-daero,<br>
+                Gangnam-gu, Seoul, 06252, Republic of Korea
+            </p>
+            <p style="margin-top: 2em;">
+                <span id="title">매니저</span><br>
+                <span id="name">홍길동</span> ·
+                <span id="name_en">Gildong Hong</span><br>
+                <span id="phone">+82-10-0000-0000</span><br>
+                <span id="email">mail@verniv.io</span>
+            </p>
+        </div>
+        <div style="margin-left: 20px;">
+            <form style="display: flex; flex-direction: column;">
+                <input name="title" type="text" placeholder="매니저"><br>
+                <input name="name" type="text" placeholder="홍길동"><br>
+                <input name="name_en" type="text" placeholder="Gildong Hong"><br>
+                <input name="phone" type="text" value="+82-10-0000-0000"><br>
+                <input name="email" type="email" placeholder="mail@verniv.io">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
